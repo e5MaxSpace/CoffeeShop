@@ -60,14 +60,24 @@ public class CoffeeShopTest {
 		assertEquals("Coffee(22.00) + Milk(3.50) | Total=25.50", aCustomer
 				.getOrder().getText());
 	}
-	
+
 	@Test
-	public void testBuyRedTeaAndHoney () {
+	public void testBuyRedTeaAndHoney() {
 		Customer aCustomer = new Customer();
 		aCustomer.buy("RedTea");
 		aCustomer.buy("Honey");
 
 		assertEquals("RedTea(25.00) + Honey(4.50) | Total=29.50", aCustomer
+				.getOrder().getText());
+	}
+
+	@Test
+	public void testBuyBeerAndLemon() {
+		Customer aCustomer = new Customer();
+		aCustomer.buy("Beer");
+		aCustomer.buy("Lemon");
+
+		assertEquals("Beer(18.00) + Lemon(5.00) | Total=23.00", aCustomer
 				.getOrder().getText());
 	}
 }

@@ -11,5 +11,10 @@ public abstract class Condiment extends Beverage {
 		return m_aBeverage.text() + " + " + toString();
 	}
 
+	@Override
+	protected double cost() {
+		return m_aBeverage.cost() + price();
+	}
+
 	protected Beverage m_aBeverage = null;
 }

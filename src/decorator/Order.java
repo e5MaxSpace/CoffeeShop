@@ -38,5 +38,8 @@ public class Order {
 		if (string == "Honey") {
 			aBeverage = new Honey(aBeverage);
 		}
+		if (string == "Lemon") {
+			aBeverage = new Lemon(aBeverage);
+		}
 	}
 }
