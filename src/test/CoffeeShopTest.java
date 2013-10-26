@@ -80,4 +80,14 @@ public class CoffeeShopTest {
 		assertEquals("Beer(18.00) + Lemon(5.00) | Total=23.00", aCustomer
 				.getOrder().getText());
 	}
+	
+	@Test
+	public void testBuyCokeAndLemon() {
+		Customer aCustomer = new Customer();
+		aCustomer.buy("Coke");
+		aCustomer.buy("Lemon");
+
+		assertEquals("Coke(12.00) + Lemon(5.00) | Total=17.00", aCustomer
+				.getOrder().getText());
+	}
 }
