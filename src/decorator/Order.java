@@ -12,6 +12,10 @@ public class Order {
 		{
 			aBeverage = new PlainTea();
 		}
+		if (beverageName == "Beer")
+		{
+			aBeverage = new Beer();
+		}
 	}
 	
 	public String getText() {
