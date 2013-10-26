@@ -21,7 +21,10 @@ public class Order {
 			aBeverage = new Coffee();
 		}
 		if (string == "PlainTea") {
-			aBeverage = new PlainTea();
+			aBeverage = new Tea("PlainTea");
+		}
+		if (string == "RedTea") {
+			aBeverage = new Tea("RedTea");
 		}
 		if (string == "Beer") {
 			aBeverage = new Beer();
@@ -31,6 +34,9 @@ public class Order {
 		}
 		if (string == "Milk") {
 			aBeverage = new Milk(aBeverage);
+		}
+		if (string == "Honey") {
+			aBeverage = new Honey(aBeverage);
 		}
 	}
 }

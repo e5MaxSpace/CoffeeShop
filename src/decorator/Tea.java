@@ -1,10 +1,14 @@
 package decorator;
 
-public class Coke extends Beverage {
+public class Tea extends Beverage {
+
+	public Tea(String name) {
+		m_name = name;
+	}
 
 	@Override
 	public String name() {
-		return "Coke";
+		return m_name;
 	}
 
 	@Override
@@ -17,5 +21,7 @@ public class Coke extends Beverage {
 		return PRICE;
 	}
 
-	private static double PRICE = 12.0;
+	private String m_name;
+
+	private static double PRICE = 25.0;
 }

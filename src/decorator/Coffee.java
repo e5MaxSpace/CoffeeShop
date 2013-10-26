@@ -1,15 +1,21 @@
 package decorator;
 
-public class Coffee implements Beverage {
-
+public class Coffee extends Beverage {
 	@Override
-	public String text() {
-		return "Coffee (22.00)";
+	public String name() {
+		return "Coffee";
 	}
 
 	@Override
 	public double cost() {
-		return 22.0;
+		return PRICE;
 	}
+
+	@Override
+	double price() {
+		return PRICE;
+	}
+
+	private static double PRICE = 22.0;
 
 }

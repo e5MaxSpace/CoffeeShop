@@ -1,14 +1,14 @@
 package decorator;
 
-public class Milk extends Condiment {
+public class Honey extends Condiment {
 
-	public Milk(Beverage beverage) {
+	public Honey(Beverage beverage) {
 		super(beverage);
 	}
 
 	@Override
 	public String name() {
-		return "Milk";
+		return "Honey";
 	}
 
 	@Override
@@ -21,5 +21,5 @@ public class Milk extends Condiment {
 		return PRICE;
 	}
 
-	private static double PRICE = 3.5;
+	private static double PRICE = 4.5;
 }

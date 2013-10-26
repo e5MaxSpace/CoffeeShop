@@ -1,7 +1,19 @@
 package decorator;
 
-public interface Beverage {
+import java.text.DecimalFormat;
 
-	String text();
-    double cost();
+public abstract class Beverage {
+	public String text() {
+		return toString();
+	}
+
+	public String toString() {
+		return name() + "(" + new DecimalFormat("#.00").format(price()) + ")";
+	}
+
+	abstract String name();
+
+	abstract double price();
+
+	abstract double cost();
 }

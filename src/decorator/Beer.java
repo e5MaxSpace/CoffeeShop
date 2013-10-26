@@ -1,15 +1,22 @@
 package decorator;
 
-public class Beer implements Beverage {
+public class Beer extends Beverage {
 
 	@Override
-	public String text() {
-		return "Beer (18.00)";
+	public String name() {
+		return "Beer";
 	}
 
 	@Override
 	public double cost() {
-		return 18.0;
+		return PRICE;
 	}
+
+	@Override
+	double price() {
+		return PRICE;
+	}
+
+	private static double PRICE = 18.0;
 
 }
