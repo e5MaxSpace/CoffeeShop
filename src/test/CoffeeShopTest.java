@@ -114,4 +114,19 @@ public class CoffeeShopTest {
 				"GreenTea(25.00) + Honey(4.50) + Milk(3.50) + Chocolate(7.00) | Total=40.00",
 				aCustomer.getOrder().getText());
 	}
+
+	@Test
+	public void testBuyCokeAndAllCondiment() {
+		Customer aCustomer = new Customer();
+		aCustomer.buy("Coke");
+		aCustomer.buy("Milk");
+		aCustomer.buy("Honey");
+		aCustomer.buy("Lemon");
+		aCustomer.buy("Chocolate");
+		aCustomer.buy("Mocha");
+
+		assertEquals(
+				"Coke(12.00) + Milk(3.50) + Honey(4.50) + Lemon(5.00) + Chocolate(7.00) + Mocha(8.00) | Total=40.00",
+				aCustomer.getOrder().getText());
+	}
 }
