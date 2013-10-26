@@ -40,4 +40,13 @@ public class CoffeeShopTest {
 		
 		assertEquals("Beer (18.00) | Total=18.00", aOrder.getText());
 	}
+	
+	@Test
+	public void testBuyCoke()
+	{
+		Customer aCustomer = new Customer();
+		Order aOrder = aCustomer.buy("Coke");
+		
+		assertEquals("Coke (12.00) | Total=12.00", aOrder.getText());
+	}
 }
