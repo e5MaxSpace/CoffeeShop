@@ -23,4 +23,12 @@ public class CoffeeShopTest {
 		assertEquals("Coffee (22.00) | Total=22.00", aOrder.getText());
 	}
 
+	@Test
+	public void testBuyPlainTea()
+	{
+		Customer aCustomer = new Customer();
+		Order aOrder = aCustomer.buy("PlainTea");
+		
+		assertEquals("PlainTea(25.00) | Total=25.00", aOrder.getText());
+	}
 }
