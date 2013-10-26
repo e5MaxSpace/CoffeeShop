@@ -101,4 +101,17 @@ public class CoffeeShopTest {
 		assertEquals("Coffee(22.00) + Honey(4.50) + Milk(3.50) | Total=30.00",
 				aCustomer.getOrder().getText());
 	}
+
+	@Test
+	public void testBuyGreenTeaAndHoneyAndMilkAndChocolate() {
+		Customer aCustomer = new Customer();
+		aCustomer.buy("GreenTea");
+		aCustomer.buy("Honey");
+		aCustomer.buy("Milk");
+		aCustomer.buy("Chocolate");
+
+		assertEquals(
+				"GreenTea(25.00) + Honey(4.50) + Milk(3.50) + Chocolate(7.00) | Total=40.00",
+				aCustomer.getOrder().getText());
+	}
 }

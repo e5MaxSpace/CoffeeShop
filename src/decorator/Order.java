@@ -9,7 +9,8 @@ public class Order {
 
 	public String getText() {
 		String text = aBeverage.text();
-		text += " | Total=" + new DecimalFormat("#.00").format(aBeverage.cost());
+		text += " | Total="
+				+ new DecimalFormat("#.00").format(aBeverage.cost());
 
 		return text;
 	}
@@ -26,6 +27,9 @@ public class Order {
 		if (string == "RedTea") {
 			aBeverage = new Tea("RedTea");
 		}
+		if (string == "GreenTea") {
+			aBeverage = new Tea("GreenTea");
+		}
 		if (string == "Beer") {
 			aBeverage = new Beer();
 		}
@@ -40,6 +44,9 @@ public class Order {
 		}
 		if (string == "Lemon") {
 			aBeverage = new Lemon(aBeverage);
+		}
+		if (string == "Chocolate") {
+			aBeverage = new Chocolate(aBeverage);
 		}
 	}
 }
