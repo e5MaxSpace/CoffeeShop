@@ -12,11 +12,6 @@ public class Honey extends Condiment {
 	}
 
 	@Override
-	public double cost() {
-		return m_aBeverage.cost() + PRICE;
-	}
-
-	@Override
 	double price() {
 		return PRICE;
 	}

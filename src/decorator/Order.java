@@ -8,49 +8,51 @@ public class Order {
 	}
 
 	public String getText() {
-		String text = aBeverage.text();
-		text += " | Total="
-				+ new DecimalFormat("#.00").format(aBeverage.cost());
+		String text = m_aBeverage.text();
+		text += " | Total=";
+		// TODO: 数字的格式化和另一处存在重复，是否有重构至一个工具函数的必要？
+		text += new DecimalFormat("#.00").format(m_aBeverage.cost());
 
 		return text;
 	}
 
-	private Beverage aBeverage = null;
-
 	public void add(String string) {
+		// TODO: 将该函数重构至工厂方法
 		if (string == "Coffee") {
-			aBeverage = new Coffee();
+			m_aBeverage = new Coffee();
 		}
 		if (string == "PlainTea") {
-			aBeverage = new Tea("PlainTea");
+			m_aBeverage = new Tea("PlainTea");
 		}
 		if (string == "RedTea") {
-			aBeverage = new Tea("RedTea");
+			m_aBeverage = new Tea("RedTea");
 		}
 		if (string == "GreenTea") {
-			aBeverage = new Tea("GreenTea");
+			m_aBeverage = new Tea("GreenTea");
 		}
 		if (string == "Beer") {
-			aBeverage = new Beer();
+			m_aBeverage = new Beer();
 		}
 		if (string == "Coke") {
-			aBeverage = new Coke();
+			m_aBeverage = new Coke();
 		}
+
 		if (string == "Milk") {
-			aBeverage = new Milk(aBeverage);
+			m_aBeverage = new Milk(m_aBeverage);
 		}
 		if (string == "Honey") {
-			aBeverage = new Honey(aBeverage);
+			m_aBeverage = new Honey(m_aBeverage);
 		}
 		if (string == "Lemon") {
-			aBeverage = new Lemon(aBeverage);
+			m_aBeverage = new Lemon(m_aBeverage);
 		}
 		if (string == "Chocolate") {
-			aBeverage = new Chocolate(aBeverage);
+			m_aBeverage = new Chocolate(m_aBeverage);
 		}
-		if (string == "Mocha")
-		{
-			aBeverage = new Mocha(aBeverage);
+		if (string == "Mocha") {
+			m_aBeverage = new Mocha(m_aBeverage);
 		}
 	}
+
+	private Beverage m_aBeverage = null;
 }
