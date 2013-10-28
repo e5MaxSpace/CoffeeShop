@@ -16,6 +16,7 @@ public class Order {
 		return text;
 	}
 
+	// TODO: add()函数的名字不够好
 	public void add(String string) {
 		// TODO: 将该函数重构至工厂方法
 		if (string == "Coffee") {

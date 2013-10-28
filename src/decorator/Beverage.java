@@ -3,7 +3,7 @@ package decorator;
 import java.text.DecimalFormat;
 
 public abstract class Beverage {
-	public String text() {
+	public String text() { 
 		return toString();
 	}
 
